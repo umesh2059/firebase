@@ -8,7 +8,7 @@ function App() {
   const putData=()=>{
     set(ref(db,"users/umesh"),{
       id:1,
-      name:"umesh",
+      name:"umesh gupta",
       age:23,
     })
     .then(()=>{
