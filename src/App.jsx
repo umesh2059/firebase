@@ -1,23 +1,24 @@
 // import {getDatabase,ref,set} from "firebase/database"
 import {getAuth,createUserWithEmailAndPassword} from "firebase/auth";
 import {app} from "./firebase"
+import SignupPage from './pages/signup'
+
 import './App.css'
 // const db=getDatabase(app);
 
 
-const Auth=getAuth(app)
+
+const Auth=getAuth(app);
 
 
 function App() {
 
-  const signupUser=()=>{
-    createUserWithEmailAndPassword(Auth,
-      "umeshg2059@gmail.com",
-      "umehskfdj123"
+  const SignupUser=()=>{
+    createUserWithEmailAndPassword(Auth,"umeshsdjf2059@gmail.com","umehskfdj123"
     )
     .then((value)=>console.log(value))
-
-  }
+    .catch((error) => console.log(error));
+  };
   // const putData=()=>{
   //   set(ref(db,"users/umesh"),{
   //     id:1,
@@ -35,9 +36,9 @@ function App() {
   return (
    <div className='App'>
     <h1>hello how are you </h1>
-    <button  onClick={signupUser}>create data</button>
+    <button  onClick={SignupUser}>create data</button>
    </div>
       
-  )
-}
+  );
+};
 export default App;
