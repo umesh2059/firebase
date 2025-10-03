@@ -35,8 +35,7 @@ function App() {
   // };
   return (
    <div className='App'>
-    <h1>hello how are you </h1>
-    <button  onClick={SignupUser}>create data</button>
+    <SignupPage/>
    </div>
       
   );

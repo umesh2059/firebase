@@ -1,13 +1,30 @@
-import react from 'react';
+import React,{useState} from 'react';
+import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 
+const Auth=getAuth();
 const SignupPage=()=>{
+    const[Email,setEmail]=useState("");
+    const [password,setPassword]=useState("");
+    const createUser=()=>{
+        createUserWithEmailAndPassword(Auth,Email,password)
+        .then(value=>alert('sucess'))
+    };
      return(
         <div className='signup-page'>
             <label>Email</label>
-            <input type="email" required  placeholder= 'Enter your mail'></input>
+            <input onChange={(e)=>setEmail(e.target.value)}
+            value={Email}
+            type="email"
+            required 
+            placeholder= 'Enter your mail'></input>
             <label>Password</label>
-            <input type="password" required  placeholder= 'Enter your password'></input>
+            <input onChange={(e)=>setPassword(e.target.value)} 
+            value={password}
+            type="password" 
+            required  
+            placeholder= 'Enter your password'></input>
+            <button onClick={createUser}>signup</button>
         </div>
      )
 }
-export default App;
+export default SignupPage;
