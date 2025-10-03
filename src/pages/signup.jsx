@@ -24,6 +24,9 @@ const SignupPage=()=>{
             type="password" 
             required  
             placeholder= 'Enter your password'></input>
+            <br />
+
+            <button>siginin with google</button>
             <button onClick={createUser}>signup</button>
         </div>
      )
