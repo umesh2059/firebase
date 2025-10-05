@@ -38,7 +38,7 @@ function App() {
   return (
    <div className='App'>
   <h1>Hello {user.email}</h1>
-  <button onclick={()=>signOut(Auth)}>logout</button>
+  <button onClick={()=>signOut(Auth)}>logout</button>
    </div>
       
   );

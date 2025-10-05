@@ -30,7 +30,7 @@ const SigninPage=()=>{
             <input onChange={(e)=>setpassword(e.target.value)} 
             value={password}
             type="password"
-            placeholder='enter your password here'/>
+            placeholder='enter your password '/>
             <button onClick={SigninUser}>signin</button>
         </div>
     )
